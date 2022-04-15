@@ -19,8 +19,12 @@ const AccountForm = (options) => {
     const [login, setLogin] = useState(false);
 
     useEffect(() => {
-        if (submit || login) {
+        if (submit) {
             return navigate("/");
+        }
+
+        if(login) {
+            return navigate("/Home")
         }
     });
 
